@@ -8,8 +8,8 @@ const products = [
     category: 'Electronics',
     price: 89.99,
     countInStock: 3,
-    rating: 0,
-    numReviews: 0,
+    rating: 4.5,
+    numReviews: 5,
   },
   {
     name: 'iPhone 11 Pro 256GB Memory',
@@ -20,8 +20,8 @@ const products = [
     category: 'Electronics',
     price: 599.99,
     countInStock: 10,
-    rating: 0,
-    numReviews: 0,
+    rating: 3,
+    numReviews: 9,
   },
   {
     name: 'Cannon EOS 80D DSLR Camera',
@@ -71,6 +71,6 @@ const products = [
     rating: 0,
     numReviews: 0,
   },
-]
+];
 
-export default products
+export default products;
