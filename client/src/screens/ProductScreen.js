@@ -50,6 +50,7 @@ const ProductScreen = ({ history, match }) => {
           <Col md={3}>
             <ListGroup variant="flush">
               <ListGroup.Item>{product.name}</ListGroup.Item>
+              <ListGroup.Item>{product.user}</ListGroup.Item>
               <ListGroup.Item>
                 <Rating
                   value={product.rating}
