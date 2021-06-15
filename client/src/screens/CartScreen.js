@@ -95,7 +95,7 @@ const CartScreen = ({ match, location, history }) => {
             <ListGroup.Item>
               <h2>
                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                Items
+                items
               </h2>
               $
               {cartItems
@@ -109,7 +109,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed to Checkout
+                Proceed To Checkout
               </Button>
             </ListGroup.Item>
           </ListGroup>
