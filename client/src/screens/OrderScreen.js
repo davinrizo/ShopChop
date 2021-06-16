@@ -16,7 +16,7 @@ const OrderScreen = ({ match }) => {
 
   useEffect(() => {
     dispatch(getOrderDetails(orderId));
-  }, []);
+  }, [dispatch, orderId]);
 
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2);
