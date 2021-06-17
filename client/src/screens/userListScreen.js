@@ -6,19 +6,19 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { listUsers } from '../actions/userActions';
 
-const userListScreen = () => {
+const UserListScreen = () => {
   const dispatch = useDispatch();
 
   const userList = useSelector((state) => state.userList);
-  const { loading, users, error } = userList;
-
-  const deleteHandler = (id) => {
-    console.log('asohf');
-  };
+  const { loading, error, users } = userList;
 
   useEffect(() => {
     dispatch(listUsers());
   }, [dispatch]);
+
+  const deleteHandler = (id) => {
+    console.log('asohf');
+  };
 
   return (
     <>
@@ -31,10 +31,10 @@ const userListScreen = () => {
         <Table striped bordered hover responsive className="table-sm">
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Admin</th>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>ADMIN</th>
               <th></th>
             </tr>
           </thead>
@@ -53,20 +53,19 @@ const userListScreen = () => {
                     <i className="fas fa-times" style={{ color: 'red' }}></i>
                   )}
                 </td>
-
                 <td>
-                  <LinkContainer to={`/user/${user._id}/edit`}>
+                  <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant="light" className="btn-sm">
                       <i className="fas fa-edit"></i>
                     </Button>
-                    <Button
-                      variant="danger"
-                      className="btn-sm"
-                      onClick={() => deleteHandler(user._id)}
-                    >
-                      <i className="fas fa-trash"></i>
-                    </Button>
                   </LinkContainer>
+                  <Button
+                    variant="danger"
+                    className="btn-sm"
+                    onClick={() => deleteHandler(user._id)}
+                  >
+                    <i className="fas fa-trash"></i>
+                  </Button>
                 </td>
               </tr>
             ))}
@@ -77,4 +76,4 @@ const userListScreen = () => {
   );
 };
 
-export default userListScreen;
+export default UserListScreen;
