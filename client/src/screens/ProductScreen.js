@@ -195,13 +195,19 @@ const ProductScreen = ({ history, match }) => {
                         onChange={(e) => setComment(e.target.value)}
                       ></Form.Control>
                     </Form.Group>
-                    <Button
-                      disabled={loadingReview}
-                      type="submit"
-                      variant="primary"
-                    >
-                      Submit
-                    </Button>
+                    <br />
+                    <Row>
+                      <Col md={9}></Col>
+                      <Col md={3} className="d-grid gap-2">
+                        <Button
+                          disabled={loadingReview}
+                          type="submit"
+                          variant="primary"
+                        >
+                          Submit
+                        </Button>
+                      </Col>
+                    </Row>
                   </Form>
                 )}
               </ListGroup.Item>

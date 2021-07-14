@@ -65,7 +65,10 @@ const OrderListScreen = ({ history }) => {
                   )}
                 </td>
                 <td>
-                  <LinkContainer to={`/order/${order._id}`}>
+                  <LinkContainer
+                    to={`/order/${order._id}`}
+                    className="d-grid gap-2"
+                  >
                     <Button variant="light" className="btn-sm">
                       Details
                     </Button>

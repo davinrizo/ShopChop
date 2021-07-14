@@ -145,7 +145,7 @@ const PlaceOrderScreen = ({ history }) => {
               <ListGroup.Item>
                 {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item className="d-grid gap-2">
                 <Button
                   type="button"
                   className="btn-block"

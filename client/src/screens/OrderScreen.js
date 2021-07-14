@@ -209,7 +209,7 @@ const OrderScreen = ({ match, history }) => {
               )}
               {loadingDeliver && <Loader />}
               {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
-                <ListGroup.Item>
+                <ListGroup.Item className="d-grid gap-2">
                   <Button
                     type="button"
                     className="btn btn-block"
