@@ -69,10 +69,11 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setCountry(e.target.value)}
           ></Form.Control>
         </Form.Group>
-
-        <Button type="submit" variant="primary">
-          Continue
-        </Button>
+        <div className="d-grid gap-2">
+          <Button type="submit" variant="primary">
+            Continue
+          </Button>
+        </div>
       </Form>
     </FormContainer>
   );

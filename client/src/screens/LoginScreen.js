@@ -53,10 +53,15 @@ const LoginScreen = ({ location, history }) => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-
-        <Button type="submit" variant="primary">
-          Sign in
-        </Button>
+        <br />
+        <Row>
+          <Col xs={9}></Col>
+          <Col xs={3} className="d-grid gap-2">
+            <Button type="submit" variant="primary">
+              Sign in
+            </Button>
+          </Col>
+        </Row>
       </Form>
 
       <Row className="py-3">
