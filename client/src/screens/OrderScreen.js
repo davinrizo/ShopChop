@@ -9,7 +9,6 @@ import {
   getOrderDetails,
   payOrder,
 } from '../actions/orderActions';
-import CheckoutSteps from '../components/CheckoutSteps';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import {

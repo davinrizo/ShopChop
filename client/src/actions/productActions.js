@@ -11,7 +11,6 @@ import {
   PRODUCT_DELETE_FAIL,
   PRODUCT_CREATE_REQUEST,
   PRODUCT_CREATE_SUCCESS,
-  PRODUCT_CREATE_RESET,
   PRODUCT_CREATE_FAIL,
   PRODUCT_UPDATE_REQUEST,
   PRODUCT_UPDATE_SUCCESS,
@@ -23,14 +22,19 @@ import {
 import { logout } from './userActions';
 
 export const listProducts =
-  (keyword = '') =>
+  (keyword = '', pageNumber = '') =>
   async (dispatch) => {
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
-      const { data } = await axios.get(`/api/products?keyword=${keyword}`);
+      const { data } = await axios.get(
+        `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+      );
 
-      dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
+      dispatch({
+        type: PRODUCT_LIST_SUCCESS,
+        payload: data,
+      });
     } catch (error) {
       dispatch({
         type: PRODUCT_LIST_FAIL,
